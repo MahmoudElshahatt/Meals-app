@@ -7,7 +7,7 @@ import com.shahtott.domain.repo.MealsRepository
 class MealsRepositoryImpl(
     private val api: ApiService
 ) : MealsRepository {
-    override fun getMealsFromRemote(): MealsCategoriesResponse =
+    override suspend fun getMealsFromRemote(): MealsCategoriesResponse =
         api.getMeals()
 
 }
