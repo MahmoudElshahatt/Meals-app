@@ -30,6 +30,6 @@ class MealsViewModel @Inject constructor(
         viewModelScope.launch {
             _state.update { getMealsUseCase() }
         }
-    }
+          }
 
 }

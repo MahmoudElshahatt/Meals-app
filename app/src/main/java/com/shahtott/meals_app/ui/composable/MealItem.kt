@@ -1,5 +1,6 @@
 package com.shahtott.meals_app.ui.composable
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -15,19 +16,29 @@ import com.shahtott.domain.entity.MealsCategoriesResponse
 import com.shahtott.meals_app.ui.theme.Meals_appTheme
 
 @Composable
-fun MealItem(category: MealsCategoriesResponse.Category?) {
+fun MealItem(
+    modifier: Modifier = Modifier,
+    category: MealsCategoriesResponse.Category?,
+    onClick: (MealsCategoriesResponse.Category) -> Unit
+) {
     Card(
-        modifier = Modifier
+        modifier = modifier
             .padding(8.dp, 4.dp)
             .fillMaxWidth()
             .height(110.dp), shape = RoundedCornerShape(8.dp), elevation = 4.dp
     ) {
-        Surface() {
+        Surface{
 
             Row(
                 Modifier
+                    .clickable {
+                        if (category != null) {
+                            onClick(category)
+                        }
+                    }
                     .padding(4.dp)
                     .fillMaxSize()
+
             ) {
 
                 CircularImage(
@@ -43,7 +54,7 @@ fun MealItem(category: MealsCategoriesResponse.Category?) {
                     modifier = Modifier
                         .padding(4.dp)
                         .fillMaxHeight()
-                        .weight(0.7f)
+                        .weight(0.65f)
                 ) {
                     Text(
                         text = category?.strCategory ?: "",
@@ -73,7 +84,9 @@ fun DefaultPreview() {
             category = MealsCategoriesResponse.Category(
                 "1", "Fwsfwe", "wdfsd",
                 "dsfds"
-            )
+            ), onClick = {
+
+            }
         )
     }
 }
