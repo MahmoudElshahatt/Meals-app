@@ -14,14 +14,14 @@ The app showcases a variety of meal categories from network.
 
 Book Shelf is built using the following cutting-edge technologies:
 
-* Jetpack Compose: Android's recommended modern toolkit for building native UI. It simplifies and accelerates UI development on Android.
-* Modularization: Organizing a codebase into loosely coupled and self-contained parts.
-* Clean architecture: A method of software development in which you should be able to identify what a program performs merely by looking at its source code.
-* MVVM architecture: Well-structured and maintainable codebase.
-* Hilt: Dependency injection for clean and modular code.
-* Retrofit: The class through which your API interfaces are turned into callable objects.
-* Koil: An image-loading library for Android backed by Kotlin Coroutines.
-* Kotlin Coroutines: For background tasks like calling a Retrofit call.
+* **Jetpack Compose**: Android's recommended modern toolkit for building native UI. It simplifies and accelerates UI development on Android.
+* **Modularization**: Organizing a codebase into loosely coupled and self-contained parts.
+* **Clean architecture**: A method of software development in which you should be able to identify what a program performs merely by looking at its source code.
+* **MVVM architecture**: Well-structured and maintainable codebase.
+* **Hilt**: Dependency injection for clean and modular code.
+* **Retrofit**: The class through which your API interfaces are turned into callable objects.
+* **Koil**: An image-loading library for Android backed by Kotlin Coroutines.
+* **Kotlin Coroutines**: For background tasks like calling a Retrofit call.
 
 
 
